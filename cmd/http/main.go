@@ -5,13 +5,14 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
-	_ "github.com/lib/pq"
 	"github.com/nvcnvn/wuery"
 )
 
 func main() {
-	db, err := sql.Open("postgres", "postgresql://root@solus:26257/wuery?sslmode=disable")
+	os.Getenv("")
+	db, err := sql.Open("postgres", "postgresql://root@ubuntu:26257/wuery?sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -30,5 +31,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	http.ListenAndServe(":8080", &wuery.HTTPServer{})
+	w := wuery.NewWuery(db)
+	log.Panicln(http.ListenAndServe(":6969", wuery.NewHTTPServer(w)))
 }

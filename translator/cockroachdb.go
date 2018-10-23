@@ -10,6 +10,7 @@ var _ = pq.BoolArray{}
 
 // CockRoachTranslate implement bla bla bla
 type CockRoachTranslate struct {
+	db *sql.DB
 }
 
 // Translate recieves bla bla bla

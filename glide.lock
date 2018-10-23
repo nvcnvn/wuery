@@ -1,0 +1,294 @@
+hash: c22bc1ede7268f2c7cc3cb61990829629f4f9668acf6bb96c3ea40b678e3a43f
+updated: 2018-10-23T15:24:38.606389813+07:00
+imports:
+- name: github.com/apache/thrift
+  version: cd829a0b9a5c66203b63350fa029589669ec43f6
+  subpackages:
+  - lib/go/thrift
+- name: github.com/aws/aws-sdk-go
+  version: 3ca7919959ff8f930d28bc50e06d0c229177a291
+  subpackages:
+  - aws
+  - aws/awserr
+  - aws/credentials
+  - aws/endpoints
+  - internal/ini
+  - internal/sdkio
+  - internal/shareddefaults
+- name: github.com/beorn7/perks
+  version: 3a771d992973f24aa725d07868b467d1ddfceafb
+  subpackages:
+  - quantile
+- name: github.com/biogo/store
+  version: 913427a1d5e89604e50ea1db0f28f34966d61602
+  subpackages:
+  - llrb
+- name: github.com/certifi/gocertifi
+  version: ee1a9a0726d2ae45f54118cac878c990d4016ded
+- name: github.com/cockroachdb/apd
+  version: bced77f817b446cc6f6453d6cab5891e43f9ba17
+- name: github.com/cockroachdb/cockroach
+  version: f9775e0207967c9d43c8735facb6ec0759a095d9
+  repo: https://github.com/nvcnvn/cockroach.git
+  vcs: git
+  subpackages:
+  - pkg/base
+  - pkg/build
+  - pkg/cli/cliflags
+  - pkg/internal/client
+  - pkg/keys
+  - pkg/roachpb
+  - pkg/security
+  - pkg/settings
+  - pkg/settings/cluster
+  - pkg/sql/coltypes
+  - pkg/sql/lex
+  - pkg/sql/parser
+  - pkg/sql/pgwire/pgerror
+  - pkg/sql/privilege
+  - pkg/sql/sem/tree
+  - pkg/sql/sem/types
+  - pkg/sql/sessiondata
+  - pkg/storage/engine/enginepb
+  - pkg/util
+  - pkg/util/arith
+  - pkg/util/bitarray
+  - pkg/util/cache
+  - pkg/util/caller
+  - pkg/util/duration
+  - pkg/util/encoding
+  - pkg/util/envutil
+  - pkg/util/fileutil
+  - pkg/util/hlc
+  - pkg/util/humanizeutil
+  - pkg/util/interval
+  - pkg/util/ipaddr
+  - pkg/util/json
+  - pkg/util/log
+  - pkg/util/log/logflags
+  - pkg/util/log/logtags
+  - pkg/util/metric
+  - pkg/util/mon
+  - pkg/util/pretty
+  - pkg/util/protoutil
+  - pkg/util/randutil
+  - pkg/util/retry
+  - pkg/util/ring
+  - pkg/util/stop
+  - pkg/util/stringencoding
+  - pkg/util/syncutil
+  - pkg/util/sysutil
+  - pkg/util/timeofday
+  - pkg/util/timeutil
+  - pkg/util/tracing
+  - pkg/util/uint128
+  - pkg/util/uuid
+- name: github.com/cockroachdb/ttycolor
+  version: a1d5aaeb377d139ee5a6eae5f2885752e417b522
+- name: github.com/codahale/hdrhistogram
+  version: 3a0bb77429bd3a61596f5e8a3172445844342120
+- name: github.com/DataDog/zstd
+  version: 6672cee605cfd0c1bf8331fa33740e7241515c1c
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/dustin/go-humanize
+  version: 9f541cc9db5d55bce703bd99987c9d5cb8eea45e
+- name: github.com/eapache/go-resiliency
+  version: ea41b0fad31007accc7f806884dcdf3da98b79ce
+  subpackages:
+  - breaker
+- name: github.com/eapache/go-xerial-snappy
+  version: 776d5712da21bc4762676d614db1d8a64f4238b0
+- name: github.com/eapache/queue
+  version: 093482f3f8ce946c05bcba64badd2c82369e084d
+- name: github.com/getsentry/raven-go
+  version: d1aab6ee63f4a2cca2169c538eceba058cb976b7
+- name: github.com/go-logfmt/logfmt
+  version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
+- name: github.com/gogo/protobuf
+  version: 6f222ca7387001523464e651447e272d9d2aa6f6
+  subpackages:
+  - jsonpb
+  - proto
+  - sortkeys
+  - types
+- name: github.com/golang/protobuf
+  version: d7fc20193620986259ffb1f9b9da752114ee14a4
+  subpackages:
+  - jsonpb
+  - proto
+  - protoc-gen-go/descriptor
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/struct
+  - ptypes/timestamp
+- name: github.com/golang/snappy
+  version: 2e65f85255dbc3072edf28d6b5b8efc472979f5a
+- name: github.com/grpc-ecosystem/grpc-gateway
+  version: f7cf64976c2a46ce866933fa726e89cbb6f31977
+  subpackages:
+  - runtime
+  - runtime/internal
+  - utilities
+- name: github.com/hashicorp/go-version
+  version: b5a281d3160aa11950a6182bd9a9dc2cb1e02d50
+- name: github.com/kr/logfmt
+  version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
+- name: github.com/kr/pretty
+  version: 73f6ac0b30a98e433b289500d779f50c1a6f0712
+- name: github.com/kr/text
+  version: e2ffdb16a802fe2bb95e2e35ff34f0e53aeef34f
+- name: github.com/lib/pq
+  version: 4ded0e9383f75c197b3a2aaa6d590ac52df6fd79
+  subpackages:
+  - oid
+- name: github.com/lightstep/lightstep-tracer-go
+  version: 65fac44b2e09e82201d661ba399f9b54c2ac763f
+  subpackages:
+  - collectorpb
+  - lightstep/rand
+  - lightstep_thrift
+  - lightsteppb
+  - thrift_0_9_2/lib/go/thrift
+- name: github.com/matttproud/golang_protobuf_extensions
+  version: c12348ce28de40eed0136aa2b644d0ee0650e56c
+  subpackages:
+  - pbutil
+- name: github.com/opentracing-contrib/go-observer
+  version: a52f2342449246d5bcc273e65cbdcfa5f7d6c63c
+- name: github.com/opentracing/opentracing-go
+  version: be550b025b433cdfa2f11efb962afa2ea3c4d967
+  subpackages:
+  - ext
+  - log
+- name: github.com/openzipkin-contrib/zipkin-go-opentracing
+  version: b85dc675b16b116a00c351d2c41305bf9ae71293
+  subpackages:
+  - flag
+  - thrift/gen-go/scribe
+  - thrift/gen-go/zipkincore
+  - types
+  - wire
+- name: github.com/openzipkin/zipkin-go-opentracing
+  version: b85dc675b16b116a00c351d2c41305bf9ae71293
+- name: github.com/petermattis/goid
+  version: b0b1615b78e5ee59739545bb38426383b2cda4c9
+- name: github.com/pierrec/lz4
+  version: 635575b42742856941dbc767b44905bb9ba083f6
+  subpackages:
+  - internal/xxh32
+- name: github.com/pkg/errors
+  version: d58f94251046e7f70ac45aceea6cf6f61415ccca
+- name: github.com/prometheus/client_golang
+  version: 16f375c74db6ccf880e1cd9c6c6087a6d58e5d12
+  subpackages:
+  - prometheus
+  - prometheus/graphite
+  - prometheus/internal
+- name: github.com/prometheus/client_model
+  version: 5c3871d89910bfb32f5fcab2aa4b9ec68e65a99f
+  subpackages:
+  - go
+- name: github.com/prometheus/common
+  version: 7e9e6cabbd393fc208072eedef99188d0ce788b6
+  subpackages:
+  - expfmt
+  - internal/bitbucket.org/ww/goautoneg
+  - model
+- name: github.com/prometheus/procfs
+  version: 185b4288413d2a0dd0806f78c90dde719829e5ae
+  subpackages:
+  - internal/util
+  - nfs
+  - xfs
+- name: github.com/rcrowley/go-metrics
+  version: 3113b8401b8a98917cde58f8bbd42a1b1c03b1fd
+- name: github.com/sasha-s/go-deadlock
+  version: d68e2bc52ae3291765881b9056f2c1527f245f1e
+- name: github.com/satori/go.uuid
+  version: 8ccf5352a842c034b1a69f28c863aff9b1cdb116
+- name: github.com/Shopify/sarama
+  version: f3f4f5f1acf1a26acb582cfb158c2433f37288b4
+- name: github.com/spf13/pflag
+  version: 298182f68c66c05229eb03ac171abe6e309ee79a
+- name: github.com/VividCortex/ewma
+  version: 43880d236f695d39c62cf7aa4ebd4508c258e6c0
+- name: golang.org/x/crypto
+  version: 0c41d7ab0a0ee717d4590a44bcb987dfd9e183eb
+  subpackages:
+  - bcrypt
+  - blowfish
+  - ssh/terminal
+- name: golang.org/x/net
+  version: 04a2e542c03f1d053ab3e4d6e5abcd4b66e2be8e
+  subpackages:
+  - context
+  - http/httpguts
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - trace
+- name: golang.org/x/sync
+  version: 1d60e4601c6fd243af51cc01ddf169918a5407ca
+  subpackages:
+  - syncmap
+- name: golang.org/x/sys
+  version: 8a28ead16f52c8aaeffbf79239b251dfdf6c4f96
+  subpackages:
+  - unix
+  - windows
+- name: golang.org/x/text
+  version: 4d1c5fb19474adfe9562c9847ba425e7da817e81
+  subpackages:
+  - collate
+  - internal/colltab
+  - internal/language
+  - internal/language/compact
+  - internal/tag
+  - language
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+- name: golang.org/x/tools
+  version: 40a48ad93fbe707101afb2099b738471f70594ec
+  subpackages:
+  - container/intsets
+- name: google.golang.org/genproto
+  version: 94acd270e44e65579b9ee3cdab25034d33fed608
+  subpackages:
+  - googleapis/api/annotations
+  - googleapis/rpc/status
+- name: google.golang.org/grpc
+  version: e120c3f9007f8f26b19cf840e6483eccf03d44a2
+  subpackages:
+  - balancer
+  - balancer/base
+  - balancer/roundrobin
+  - codes
+  - connectivity
+  - credentials
+  - encoding
+  - encoding/proto
+  - grpclog
+  - internal
+  - internal/backoff
+  - internal/channelz
+  - internal/envconfig
+  - internal/grpcrand
+  - internal/transport
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - resolver
+  - resolver/dns
+  - resolver/passthrough
+  - stats
+  - status
+  - tap
+testImports: []

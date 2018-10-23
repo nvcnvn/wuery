@@ -1,0 +1,10 @@
+package: github.com/nvcnvn/wuery
+import:
+- package: github.com/cockroachdb/cockroach
+  version: master-go-get
+  repo: https://github.com/nvcnvn/cockroach.git
+  vcs: git
+  subpackages:
+  - pkg/sql/parser
+- package: github.com/lib/pq
+  version: ~1.0.0
