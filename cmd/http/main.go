@@ -11,8 +11,8 @@ import (
 )
 
 func main() {
-	os.Getenv("")
-	db, err := sql.Open("postgres", "postgresql://root@ubuntu:26257/wuery?sslmode=disable")
+	dataSource := os.Getenv("DATA_SOURCE_NAME")
+	db, err := sql.Open("postgres", dataSource)
 	if err != nil {
 		log.Fatal(err)
 	}
