@@ -18,9 +18,27 @@ spec:
       - name: regcred
       containers:
       - name: wuery
-        image: registry.gitlab.com/kidstuff/my-dream-it-corp:latest
+        image: registry.gitlab.com/kidstuff/my-dream-it-corp:0.0.1
+        imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 6969
         env:
           - name: DATA_SOURCE_NAME
             value: {{ printf "postgresql://root@%s-cockroachdb-public:26257/wuery?sslmode=disable" .Release.Name  }}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ printf "%s-wuery-service" .Release.Name | trunc 56 }}
+  labels:
+    app: wuery
+spec:
+  type: ClusterIP
+  selector:
+    app: wuery
+  ports:
+  - port: 6969
+    targetPort: 6969
+    name: http
