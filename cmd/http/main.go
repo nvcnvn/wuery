@@ -12,6 +12,7 @@ import (
 
 func main() {
 	dataSource := os.Getenv("DATA_SOURCE_NAME")
+	log.Println("Connection string:", dataSource)
 	db, err := sql.Open("postgres", dataSource)
 	if err != nil {
 		log.Fatal(err)

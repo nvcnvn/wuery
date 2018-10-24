@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ printf "%s-wuery-deployment" .Release.Name | trunc 56 }}
+  labels:
+    app: wuery
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wuery
+  template:
+    metadata:
+      labels:
+        app: wuery
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: wuery
+        image: registry.gitlab.com/kidstuff/my-dream-it-corp:latest
+        ports:
+        - containerPort: 80
+        env:
+          - name: DATA_SOURCE_NAME
+            value: {{ printf "postgresql://root@%s-cockroachdb-public:26257/wuery?sslmode=disable" .Release.Name  }}
