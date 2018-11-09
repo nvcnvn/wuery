@@ -17,6 +17,7 @@ type CockRoachTranslate struct {
 // Translate recieves bla bla bla
 func (t *CockRoachTranslate) Translate(rows *sql.Rows) []byte {
 	jsonResult := gabs.New()
+	jsonResult.Set("Q", "query")
 	jsonResult.Array("results")
 
 	for i := 0; i < 3; i++ {
@@ -25,5 +26,9 @@ func (t *CockRoachTranslate) Translate(rows *sql.Rows) []byte {
 		jsonObj.Set("bla bla", "bla")
 		jsonResult.ArrayAppend(jsonObj, "results")
 	}
-	return jsonResult.Bytes()
+
+	b := jsonResult.Bytes()
+	println("aaaaaaaaaa")
+	println(string(b))
+	return b
 }

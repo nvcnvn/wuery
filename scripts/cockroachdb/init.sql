@@ -1,6 +1,6 @@
-CREATE DATABASE wuery;
+CREATE DATABASE IF NOT EXISTS wuery;
 
-CREATE TABLE wuery.all_types (
+CREATE TABLE IF NOT EXISTS wuery.all_types (
     t_bool BOOL DEFAULT true,
     t_boolean BOOLEAN DEFAULT false,
     t_bytes BYTES DEFAULT b'\x61\x62\x63',

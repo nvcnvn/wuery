@@ -10,3 +10,5 @@ import:
   version: ~1.0.0
 - package: github.com/Jeffail/gabs
   version: ~1.1.1
+- package: github.com/golang-migrate/migrate
+  version: ~4.0.2
