@@ -7,6 +7,7 @@ import (
 	"github.com/cockroachdb/cockroach/pkg/sql/parser"
 	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
 	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/nvcnvn/wuery/translator"
 )
 
 // Wuery can validate the SQL statement
@@ -52,6 +53,12 @@ func (w *Wuery) Query(ctx context.Context, query string) ([]byte, error) {
 		return nil, err
 	}
 
-	_, err = w.db.QueryContext(ctx, query)
-	return nil, err
+	rows, err := w.db.QueryContext(ctx, query)
+	if err != nil {
+		return nil, err
+	}
+
+	t := &translator.CockRoachTranslate{}
+
+	return t.Translate(rows), err
 }

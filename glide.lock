@@ -1,5 +1,5 @@
-hash: c22bc1ede7268f2c7cc3cb61990829629f4f9668acf6bb96c3ea40b678e3a43f
-updated: 2018-10-23T15:24:38.606389813+07:00
+hash: cecb0d7aa332867f64fd08f382944c69321af3ad3ea1bd9ef0f09e0572d3fda1
+updated: 2018-11-09T11:57:19.879849375+07:00
 imports:
 - name: github.com/apache/thrift
   version: cd829a0b9a5c66203b63350fa029589669ec43f6
@@ -115,7 +115,7 @@ imports:
   - sortkeys
   - types
 - name: github.com/golang/protobuf
-  version: d7fc20193620986259ffb1f9b9da752114ee14a4
+  version: aa810b61a9c79d51363740d207bb46cf8e620ed5
   subpackages:
   - jsonpb
   - proto
@@ -135,6 +135,8 @@ imports:
   - utilities
 - name: github.com/hashicorp/go-version
   version: b5a281d3160aa11950a6182bd9a9dc2cb1e02d50
+- name: github.com/Jeffail/gabs
+  version: 7be49c3f43696c7ca8c9a76d6836703d83aea404
 - name: github.com/kr/logfmt
   version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
 - name: github.com/kr/pretty
@@ -223,14 +225,14 @@ imports:
   - blowfish
   - ssh/terminal
 - name: golang.org/x/net
-  version: 04a2e542c03f1d053ab3e4d6e5abcd4b66e2be8e
+  version: 92447d55896d6f92b4a0d4fd83bd078b0374e8fa
   subpackages:
   - context
-  - http/httpguts
   - http2
   - http2/hpack
   - idna
   - internal/timeseries
+  - lex/httplex
   - trace
 - name: golang.org/x/sync
   version: 1d60e4601c6fd243af51cc01ddf169918a5407ca
@@ -259,12 +261,12 @@ imports:
   subpackages:
   - container/intsets
 - name: google.golang.org/genproto
-  version: 94acd270e44e65579b9ee3cdab25034d33fed608
+  version: 4b56f30a1fd96a133a036b62cdd2a249883dd89b
   subpackages:
   - googleapis/api/annotations
   - googleapis/rpc/status
 - name: google.golang.org/grpc
-  version: e120c3f9007f8f26b19cf840e6483eccf03d44a2
+  version: bd04c06895526e3d5a05d3a9d073f324edb491b6
   subpackages:
   - balancer
   - balancer/base
